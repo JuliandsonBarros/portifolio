@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,400;1,200&display=swap');
+
+:root {
+    --cor-principal: #26577C;
+    --cor-secundaria: #EBE4D1;
+    --cor-tercearia: #B4B4B3;
+
+    --font-primaria: 'Krona One', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;/*Controla o tamanho do componente deixando sempre nos limite do elemento PAI*/
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-tercearia);
+    text-decoration: none;
+}
+
+.apresentacao {
+    margin: 10% 15% ;/*Cria margem para centralizar o conteúdo*/
+    display: flex;/*Todos elementos HTML filhos lado a lado*/
+    gap: 82px;/*Cria espaço em pixels entre os dois elementos section e img*/
+    align-items: center;/*Centraliza  os elementos no centro do elemento PAI*/
+    justify-content: space-between; /*Cria espaço entre elementos*/
+}
+
+.apresentacao__conteudo {
+    width: 50%;/*Define largura para o agrupamento da seção*/
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--font-primaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-tercearia);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+   
+}
+
+.button__link__subtitulo {
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font: 24px;
+}
+
+.button__link {
+    width: 50%;/*Largura botao link*/
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;/*Altera fonte dos botoes*/
+    padding: 21.5px 0;/*aumenta o botão por meio do padding*/
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    text-decoration: none;
+    border:solid var(--cor-tercearia);
+}
+
+main img {
+  object-fit: cover;  
+  width: 50%;
+}
+
+div a i {
+    color: var(--cor-tercearia);
+}
+
+.button__link:hover {
+    background-color: #065F9E;
+}
+
+.apresentacao__conteudo__footer {
+    padding: 24px;
+    background-color: var(--cor-tercearia);
+    color: #282828;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    
+}
+
+@media (max-width: 1200px){
+
+    .cabecalho {
+        padding: 12%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+       width: auto;
+    }
+}
+
+/*Flex Box 
+->Usar flexbox sempre no elemento PAI
+*/
+/*UNIDADES DE MEDIDA
+REM:
+*Podemos usar o rem para usar como 
+*unidade de medida em textos ex: fontzise 32px podemos
+*trocar por 2rem/ cada rem possui 16px*/
+/*PORCENTAGEM
+*Podemos utilizar porcetagem para definir imagens. 
+Pode-se definir por porcentagem quando definirmos mensagens 
+em relação ao objeto Pai ex: img e swction 50/50% */
